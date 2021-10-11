@@ -14,7 +14,7 @@ ejemplo <- read_csv(ruta_csv)
 # mirar datos
 head(ejemplo)
 
-# importar datos gapminder
+# importar datos
 ejemplo_puntoycoma <- read_csv2(ruta_csv)
 # mirar datos
 head(ejemplo_puntoycoma)
