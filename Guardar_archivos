@@ -1,0 +1,25 @@
+# instalar paquete readr
+install.packages("readr")
+
+# cargar paquete readr
+library(readr)
+
+# buscar la ruta del archivo de csv
+file.choose()
+
+ruta_csv="C:\\Users\\maria\\Desktop\\ejemplo.csv"
+
+# importar datos gapminder
+ejemplo <- read_csv(ruta_csv)
+# mirar datos
+head(ejemplo)
+
+# importar datos gapminder
+ejemplo_puntoycoma <- read_csv2(ruta_csv)
+# mirar datos
+head(ejemplo_puntoycoma)
+
+# podemos guardar nuestros datos 
+write.table(ejemplo_puntoycoma, file = "Ejemplo_guardar.txt", row.names = FALSE) # guarda un archivo txt
+write.csv(ejemplo_puntoycoma, file = "Ejemplo_guardar.csv", row.names = FALSE) # guarda un archivo csv
+write.table(ejemplo_puntoycoma, file = "Ejemplo_guardar.xls", row.names = FALSE) # guarda un archivo excel
