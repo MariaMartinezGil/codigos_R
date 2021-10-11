@@ -1,0 +1,28 @@
+# instalar paquete readr
+install.packages("readr")
+
+# cargar paquete readr
+library(readr)
+
+# buscar la ruta del archivo de csv
+file.choose()
+
+ruta_csv="C:\\Users\\maria\\Desktop\\cosas_R\\ejemplo.csv"
+
+# importar datos gapminder
+ejemplo <- read_csv(ruta_csv)
+# mirar datos
+head(ejemplo)
+
+# importar datos gapminder
+ejemplo_puntoycoma <- read_csv2(ruta_csv)
+# mirar datos
+head(ejemplo_puntoycoma)
+
+#otras formas de leer
+y <- read.table("Ejemplo_guardar.txt", header=TRUE) # lee un archivo txt
+y <- read.csv("Ejemplo_guardar.csv",header = TRUE) # lee un archivo csv
+y <- read.table("Ejemplo_guardar.xls", header=TRUE) # lee un archivo xls
+
+#En el caso de que los decimales estén determinados por una coma, 
+#debemos especificarlo en R (argumento dec=»,»), ya que R lee los decimales con puntos.
