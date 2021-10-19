@@ -9,7 +9,7 @@ file.choose()
 
 ruta_csv="C:\\Users\\maria\\Desktop\\cosas_R\\ejemplo.csv"
 
-# importar datos gapminder
+# importar datos
 ejemplo <- read_csv(ruta_csv)
 # mirar datos
 head(ejemplo)
